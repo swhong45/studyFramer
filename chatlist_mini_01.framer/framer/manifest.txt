@@ -1,0 +1,62 @@
+app.coffee
+framer/backups/backup-2016-06-19 16.21.18.coffee
+framer/backups/backup-2016-06-19 16.23.18.coffee
+framer/backups/backup-2016-06-19 16.24.18.coffee
+framer/backups/backup-2016-06-19 16.25.18.coffee
+framer/backups/backup-2016-06-19 16.26.18.coffee
+framer/backups/backup-2016-06-19 16.30.18.coffee
+framer/backups/backup-2016-06-19 16.40.18.coffee
+framer/backups/backup-2016-06-19 16.41.18.coffee
+framer/backups/backup-2016-06-19 16.42.18.coffee
+framer/backups/backup-2016-06-19 16.55.19.coffee
+framer/backups/backup-2016-06-19 16.56.19.coffee
+framer/backups/backup-2016-06-19 16.58.18.coffee
+framer/backups/backup-2016-06-19 16.59.18.coffee
+framer/backups/backup-2016-06-19 17.00.18.coffee
+framer/backups/backup-2016-06-19 17.01.19.coffee
+framer/backups/backup-2016-06-19 17.02.19.coffee
+framer/backups/backup-2016-06-19 17.45.03.coffee
+framer/backups/backup-2016-06-19 17.46.02.coffee
+framer/backups/backup-2016-06-19 17.47.02.coffee
+framer/backups/backup-2016-06-19 17.48.02.coffee
+framer/backups/backup-2016-06-19 17.49.02.coffee
+framer/coffee-script.js
+framer/config.json
+framer/framer.generated.js
+framer/framer.init.js
+framer/framer.js
+framer/framer.js.map
+framer/framer.js.map.old
+framer/framer.js.old
+framer/framer.modules.js
+framer/images/background.png
+framer/images/cursor-active.png
+framer/images/cursor-active@2x.png
+framer/images/cursor.png
+framer/images/cursor@2x.png
+framer/images/icon-120.png
+framer/images/icon-152.png
+framer/images/icon-180.png
+framer/images/icon-192.png
+framer/images/icon-76.png
+framer/images/icon-arrow.png
+framer/images/icon-arrow@2x.png
+framer/images/icon-close.png
+framer/images/icon-close@2x.png
+framer/images/icon-framer.png
+framer/images/icon-framer@2x.png
+framer/images/icon-share.png
+framer/images/icon-share@2x.png
+framer/manifest.txt
+framer/mirror.css
+framer/preview.png
+framer/style.css
+framer/version
+images/ad_01.png
+images/ad_02.png
+images/ad_03.png
+images/Chatlist.png
+images/chatlist_item.png
+images/popup_mini.png
+index.html
+modules/myModule.coffee
