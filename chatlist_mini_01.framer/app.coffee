@@ -1,16 +1,38 @@
 
 #create layers
-chatlist = new Layer
-	image: "images/chatlist.png"
+body_scroll = new ScrollComponent
+    width: Screen.width
+    backgroundColor: "white"
+   	height: 1280
+body_scroll.scrollVertical = true
+body_scroll.scrollHorizontal = false
+
+chatlist_header = new Layer
+	image: "images/header.png"
 	width: Screen.width
-	height: Screen.height
+	height: 127
+
+chatlist_body = new Layer
+	image: "images/chatlist_body.png"
+	width: Screen.width
+	height: 2100
+	y: 127
+	superLayer: body_scroll.content
+	
+chatlist_footer = new Layer
+	image: 'images/footer.png'
+	width: Screen.width
+	height:100
+	y: Align.bottom
 
 chatlist_item = new Layer
 	image: "images/chatlist_item.png"
 	width: Screen.width
 	height: Screen.height
-	x: 720
-	y: 0
+	scaleY: 1.08
+	x: 730
+	y: -116
+	parent: chatlist_body
 
 popup_mini = new Layer
 	image: "images/popup_mini.png"
@@ -20,6 +42,32 @@ popup_mini = new Layer
 	y: Align.center
 	opacity: 1
 	scale: 0
+
+inapp_page = new Layer
+	x:750
+	size: Screen.size
+	backgroundColor: "white"
+
+inapp_header = new Layer
+	parent: inapp_page
+	image: "images/inapp_header.png"
+	width: Screen.width
+	height: 130
+
+inapp_scroll = new ScrollComponent
+	width: Screen.width
+	height: Screen.height - inapp_header.height
+	parent: inapp_page
+	y:inapp_header.height
+
+inapp_body = new Layer
+	image: "images/inapp_body.png"
+	width: Screen.width
+	height: 2728
+	superLayer: inapp_scroll.content
+
+inapp_scroll.scrollVertical = true
+inapp_scroll.scrollHorizontal = false
 
 ad_01 = new Layer
 	image: "images/ad_01.png"
@@ -58,11 +106,27 @@ back03 = new Layer
 	y: 30
 	opacity: 0
 
+back04 =new Layer
+	width: 130
+	height: 130
+	parent: inapp_page
+	opacity: 0
+
+action_btn = new Layer
+	parent: chatlist_body
+	width: 121
+	height: 47
+	x: 612
+	y: 1426
+	opacity: 0.2
+	backgroundColor: "green"
+	borderRadius: 12
+
 # define animation
 chatlist_item_moveleft = new Animation
     layer: chatlist_item
     properties:
-        x: Align.center(-600)
+        x: Align.center(-800)
     curve: "ease-in-out"
 
 popup_mini_show = new Animation
@@ -97,16 +161,18 @@ ad_03_disappear = new Animation
 	properties: 
 		x: Align.center(750)
 
-#ad_01...delay function
-#ad_01_show_fun = ->
-	#Utils.delay 0.8,->
-		#ad_01_show.start()
+inapp_page_show = new Animation
+	layer: inapp_page
+	properties: 
+		x: Align.left (-1)
 
 chatlist_item_moveleft.on(Events.AnimationEnd, popup_mini_show.start)
-#popup_mini_show.on(Events.AnimationEnd,ad_01_show_fun)
 
 popup_mini.onClick ->
 	ad_01_show.start()
+
+action_btn.onClick ->
+	inapp_page_show.start()
 
 chatlist_item.onSwipeLeft ->
 	chatlist_item_moveleft.start()
@@ -126,22 +192,24 @@ ad_03.onSwipeRight ->
 back.onClick ->
 	ad_01.x = Align.center(750)
 	popup_mini.scale = 0
-	chatlist_item.x = 720
+	chatlist_item.x = 730
+
 
 back02.onClick ->
 	ad_01.x = Align.center(750)
 	ad_02.x = Align.center(750)
 	popup_mini.scale = 0
-	chatlist_item.x = 720
+	chatlist_item.x = 730
 
 back03.onClick ->
 	ad_01.x = Align.center(750)
 	ad_02.x = Align.center(750)
 	ad_03.x = Align.center(750)
 	popup_mini.scale = 0
-	chatlist_item.x = 720
+	chatlist_item.x = 730
 
-
+back04.onClick ->
+	inapp_page.x = 750
 
 
 
